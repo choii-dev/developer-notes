@@ -1,4 +1,4 @@
-# Developer Cheatsheets 🚀
+# Developer Cheatsheets & Notes 🚀
 
 A curated collection of CLI quick references, syntax guides, and daily workflows.
 
@@ -7,7 +7,7 @@ A curated collection of CLI quick references, syntax guides, and daily workflows
 ## 📁 Repository Structure
 
 ```text
-developer-cheatsheets/
+developer-notes/
 ├── README.md
 ├── .gitignore
 └── docs/
