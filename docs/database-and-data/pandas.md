@@ -2,6 +2,8 @@
 
 A quick reference guide for essential Data Analysis operations in Python using Pandas.
 
+##### [Documentation here 👈](https://pandas.pydata.org/docs/reference/frame.html)
+
 ---
 
 ## 📑 Table of Contents
@@ -131,7 +133,7 @@ A quick reference guide for essential Data Analysis operations in Python using P
 | Method Name | Main Purpose |
 | :--- | :--- |
 | `unique()`, `nunique()`, `value_counts()` | Get unique elements and frequency counts |
-| `dropna()`, `fillna()` | Clean missing values |
+| `dropna()`, `fillna()`, `drop_duplicates()` | Clean missing values and drop duplicates |
 | `sort_values()`, `sort_index()` | Sort Series |
 | `str.*`, `dt.*`, `map()`, `apply()` | Vectorized string/date operations and mapping |
 | `nlargest()`, `nsmallest()` | Get top/bottom $N$ elements |
