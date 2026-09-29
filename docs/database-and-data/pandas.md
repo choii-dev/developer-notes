@@ -4,6 +4,23 @@ A quick reference guide for essential Data Analysis operations in Python using P
 
 ---
 
+## 📑 Table of Contents
+
+* [1. Data Ingestion & Export](#1-data-ingestion--export)
+* [2. Exploratory Data Analysis (EDA)](#2-exploratory-data-analysis-eda)
+* [3. Data Selection & Filtering](#3-data-selection--filtering)
+* [4. Data Cleaning & Transformation](#4-data-cleaning--transformation)
+* [5. Aggregation & Grouping](#5-aggregation--grouping)
+* [6. Merging & Joining](#6-merging--joining)
+* [7. Time Series Operations](#7-time-series-operations)
+* [8. Core Object Methods & Built-in Functions Reference](#8-core-object-methods--built-in-functions-reference)
+  * [DataFrame Methods](#1-dataframe-methods)
+  * [Series Methods](#2-series-methods)
+  * [Python Built-in for DataFrame](#3-python-built-in-for-dataframe)
+  * [Python Built-in for Series)](#4-python-built-in-for-series)
+
+---
+
 ## 1. Data Ingestion & Export
 
 | Action | Code Example |
@@ -90,3 +107,53 @@ A quick reference guide for essential Data Analysis operations in Python using P
 | **Resample (e.g., Monthly)** | `df.resample('ME')['sales'].sum()` |
 | **Shift / Lag Values** | `df['prev_sales'] = df['sales'].shift(1)` |
 | **Rolling Window** | `df['rolling_7d'] = df['sales'].rolling(window=7).mean()` |
+
+---
+
+## 8. Core Object Methods & Built-in Functions Reference
+
+### 1. DataFrame Methods
+
+| Method Name | Main Purpose |
+| :--- | :--- |
+| `head()`, `tail()`, `info()`, `describe()` | View structure, summary statistics, and rows |
+| `dropna()`, `fillna()`, `drop_duplicates()` | Clean missing values and drop duplicates |
+| `sort_values()`, `sort_index()` | Sort DataFrame by values or index |
+| `loc[]`, `iloc[]`, `query()` | Selection, indexing, and filtering |
+| `set_index()`, `reset_index()` | Modify index structure |
+| `groupby()`, `merge()`, `join()`, `concat()` | Grouping, aggregation, and table joins |
+| `pivot_table()`, `melt()` | Reshape tables (wide/long) |
+| `astype()` | Convert column data types |
+| `agg()` | Apply multiple aggregation functions |
+
+### 2. Series Methods
+
+| Method Name | Main Purpose |
+| :--- | :--- |
+| `unique()`, `nunique()`, `value_counts()` | Get unique elements and frequency counts |
+| `dropna()`, `fillna()` | Clean missing values |
+| `sort_values()`, `sort_index()` | Sort Series |
+| `str.*`, `dt.*`, `map()`, `apply()` | Vectorized string/date operations and mapping |
+| `nlargest()`, `nsmallest()` | Get top/bottom $N$ elements |
+| `shift()`, `diff()`, `rolling()`, `rank()` | Window, lag, and ranking calculations |
+| `transform()` | Broadcast aggregated results back to original shape |
+
+### 3. Python Built-in for DataFrame
+
+| Built-in Function | Behavior on DataFrame |
+| :--- | :--- |
+| `len()` | Returns the number of rows |
+| `type()` | Returns `<class 'pandas.core.frame.DataFrame'>` |
+| `print()` / `str()` | Converts to a table-formatted string |
+| `iter()` / `for` | Iterates over column names |
+| `abs()` / `round()` | Applies absolute value/rounding to all numeric columns |
+
+### 4. Python Built-in for Series
+
+| Built-in Function | Behavior on Series |
+| :--- | :--- |
+| `len()` | Returns the element count (length) |
+| `type()` | Returns `<class 'pandas.core.series.Series'>` |
+| `print()` / `str()` | Converts to a list-formatted string |
+| `iter()` / `for` | Iterates over element values |
+| `abs()` / `round()` | Applies absolute value/rounding to all numeric elements |
